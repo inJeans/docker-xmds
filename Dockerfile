@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     wget \
     unzip \
+    vim \
     subversion \
     libopenmpi-dev \
     openmpi-bin \
