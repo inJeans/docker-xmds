@@ -44,7 +44,7 @@ RUN wget http://www.hdfgroup.org/ftp/HDF5/current/src/hdf5-$HDF5VERSION.tar.gz &
 RUN wget http://www.fftw.org/fftw-$FFTWVERSION.tar.gz && \
     tar zxvf fftw-$FFTWVERSION.tar.gz && \
     cd /fftw-$FFTWVERSION && \
-    ./configure --disable-fortran && \
+    ./configure --disable-fortran --enable-openmp && \
     make && \
     make install && \
     cd / && \
