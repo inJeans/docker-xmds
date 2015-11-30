@@ -46,6 +46,7 @@ RUN wget http://www.fftw.org/fftw-$FFTWVERSION.tar.gz && \
     cd /fftw-$FFTWVERSION && \
     ./configure --disable-fortran --enable-openmp && \
     make && \
+    make check && \
     make install && \
     cd / && \
     rm -r fftw-$FFTWVERSION
