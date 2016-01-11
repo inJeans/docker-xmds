@@ -26,7 +26,6 @@ RUN apt-get update && apt-get install -y --fix-missing\
     python-mpmath \
     python-pandas \
     python-sympy \
-    pytohn-nose \
     python-sphinx \
     python-h5py \
     libatlas-base-dev \
