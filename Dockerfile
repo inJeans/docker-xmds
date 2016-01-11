@@ -7,7 +7,7 @@ ENV HDF5VERSION=1.8.16 \
     XMDSVERSION=2.2.2
 
 # Install required dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --fix-missing\
     build-essential \
     wget \
     unzip \
@@ -19,14 +19,19 @@ RUN apt-get update && apt-get install -y \
     python-setuptools \
     python-cheetah \
     python-numpy \
+    python-scipy \
+    python-matplotlib \
     python-pyparsing \
     python-lxml \
     python-mpmath \
-    libhdf5-serial-dev \
-    libgsl0-dev \
+    python-pandas \
+    python-sympy \
+    pytohn-nose \
     python-sphinx \
     python-h5py \
-    libatlas-base-dev
+    libatlas-base-dev \
+    libhdf5-serial-dev \
+    libgsl0-dev \
 
 # Download and install hdf
 RUN wget http://www.hdfgroup.org/ftp/HDF5/current/src/hdf5-$HDF5VERSION.tar.gz && \
